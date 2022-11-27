@@ -56,6 +56,29 @@ header {
     }
 }
 
+.me{
+    display: flex;
+    align-items: start;
+
+    svg{
+        margin-top: .35rem;
+        height: 2.25rem;
+        fill: c("light-muted");
+        width: auto;
+
+        &:hover{
+            fill: c("light");
+        }
+    }
+}
+
+nav ul{
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    margin: 0;
+}
+
 h1,
 h2 {
     color: #fff;
@@ -98,12 +121,6 @@ p{
 
 :last-child{
     margin-bottom: 0;
-}
-
-.logo {
-    width: 60px;
-    height: auto;
-    fill: c("light-muted");
 }
 
 .split {
