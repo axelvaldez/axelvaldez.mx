@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.56.1"
+  },
+  "scripts": {
+    "watch:sass": "sass --watch _sass:_site/assets/css --style compressed",
+    "build:sass": "sass _sass:_site/assets/css --style compressed",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  }
+}

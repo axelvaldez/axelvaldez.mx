@@ -1,0 +1,106 @@
+// COLOR CLASSES
+
+@each $colorname, $colorvalue in $colors {
+    .text-#{$colorname}{ color: #{$colorvalue} !important; }
+    .text-hover-#{$colorname}:hover{ color: #{$colorvalue} !important; }
+    .bg-#{$colorname}{ background-color: #{$colorvalue} !important; }
+    .bg-hover-#{$colorname}:hover{ background-color: #{$colorvalue} !important; }
+    .b-#{$colorname}{ border: 1px solid #{$colorvalue} !important; }
+    .bt-#{$colorname}{ border-top: 1px solid #{$colorvalue} !important; }
+    .br-#{$colorname}{ border-right: 1px solid #{$colorvalue} !important; }
+    .bb-#{$colorname}{ border-bottom: 1px solid #{$colorvalue} !important; }
+    .bl-#{$colorname}{ border-left: 1px solid #{$colorvalue} !important; }
+  }
+  
+// CHILD LINKS COLOR CLASSES
+@each $colorname, $colorvalue in $colors {
+    .links-#{$colorname} a:not(.btn){ color: #{$colorvalue} !important;; }
+    .links-hover-#{$colorname} a:not(.btn):hover{ color: #{$colorvalue} !important;; }
+}
+  
+  
+// BOOTSTRAP-LIKE MARGIN AND PADDING OVERRIDES
+// .m or .p for margin or padding
+// t-, r-, b-, l-, x-, y-, -: top, right, bottom, left, left and right, top and bottom, all
+// number 1-5, half or auto for margin/padding amount (in rems)
+  
+// MARGIN AND PADDING CLASSES
+  
+$prefixes: (
+    "": "",
+    "t": "-top",
+    "r": "-right",
+    "b": "-bottom",
+    "l": "-left",
+    "x": ("-left", "-right"),
+    "y": ("-top", "-bottom"),
+);
+  
+$sizes: (
+    "0": 0,
+    "1": 1rem,
+    "2": 2rem,
+    "3": 3rem,
+    "4": 4rem,
+    "5": 5rem,
+    "auto": auto,
+    "half": .5rem,
+    "1px": 1px,
+);
+  
+@each $prefix, $property in $prefixes{
+    @each $size, $i in $sizes{
+        @if $prefix == "x" or $prefix == "y"{
+            .m#{$prefix}-#{$size}{
+                @each $prop in $property{
+                    margin#{$prop}: $i !important;
+                }
+            }
+            .p#{$prefix}-#{$size}{
+                @if $size != "auto"{
+                    @each $prop in $property{
+                        padding#{$prop}: $i !important;
+                    }
+                }
+            }
+        }@else{
+            .m#{$prefix}-#{$size}{
+                margin#{$property}: $i !important;
+            }
+            .p#{$prefix}-#{$size}{
+                @if $size != "auto"{
+                    padding#{$property}: $i !important;
+                }
+            }
+        }
+    }
+}
+  
+// TYPE OVERRIDES
+  
+.text-left{ text-align: left; }
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+.text-justify{ text-align: justify; }
+
+.font-weight-regular{ font-weight: 400; }
+.font-weight-bold{ font-weight: 700; }
+
+.text-uppercase { text-transform: uppercase;}
+.text-lowercase { text-transform: lowercase;}
+.text-capitalize { text-transform: capitalize;}
+.text-transform-none { text-transform: none;}
+
+.text-underline{ text-decoration: underline; }
+.text-line-through { text-decoration: line-through; }
+.text-no-decor{ text-decoration: none; }
+  
+// DISPLAY 
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+.d-inline-flex { display: inline-flex; }
+.d-grid { display: grid; }
+.d-none{ display: none;}
+  

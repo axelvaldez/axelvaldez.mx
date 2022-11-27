@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'partials/head-content.njk' %}
+    <title>{{ site.name }}: {{ title }}</title>
+</head>
+
+<body class="{% if '/blog' in page.url %}post{% endif %}">
+
+ {% include 'partials/brand-header.njk' %}

@@ -1,0 +1,9 @@
+{% include 'partials/header.njk' %}
+
+    <section class="bb-dark-muted pb-4 mb-4">
+        <h1>{{ title }}</h1>
+        <p class="muted">{{ date  | readableDate }}</p>
+        {{ content | safe }}
+    </section>
+    
+{% include 'partials/footer.njk' %}

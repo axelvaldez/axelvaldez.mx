@@ -1,0 +1,23 @@
+{% include 'partials/header.njk' %}
+
+
+    <section>
+        <h2>The Blog</h2>
+        <ul class="no-style">
+            {%- for post in collections.posts | reverse -%}
+                <li class="split mb-4 pb-4 bb-dark-muted">
+                    <span>{{ post.date | readableDate }}</span>
+                    <div>
+                        <p><a href="{{ post.url | url }}">{{ post.data.title }}</a></p>
+                        <p class="muted">{{ post.templateContent | striptags(true) | truncate(140) }}</p>
+
+                        <p><a href="{{ post.url | url }}">Read post &rarr;</a></p>
+                    </div>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </section>
+
+   
+    
+{% include 'partials/footer.njk' %}

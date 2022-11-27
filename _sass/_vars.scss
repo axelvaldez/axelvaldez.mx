@@ -1,0 +1,12 @@
+$colors: (
+	"dark": #1C1E26,
+    "dark-muted": #2E3037,
+	"light-muted": #bebfca,
+    "light": #fff,
+	"accent": #ff5400
+);
+
+//search function for $colors
+@function c($search) {
+    @return map-get($colors, $search);
+}
