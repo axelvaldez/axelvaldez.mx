@@ -1,0 +1,59 @@
+html {
+    background: c("bg") url(/assets/img/bg1.jpg);
+}
+
+body {
+    color: c("fg");
+    mix-blend-mode: multiply;
+}
+
+a {
+    color: c("acc");
+    text-decoration: none;
+    background-image: linear-gradient(transparent 92%, c("acc") 92%), linear-gradient(transparent 92%, c("bg-muted") 92%);
+    background-size: 0 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transition: .2s ease-in background-size;
+    
+
+    &:hover{
+        text-decoration: none;
+        background-size: 100% 100%, 100% 100%;
+        transition: .2s ease-in background-size;
+    }
+}
+
+header a,
+.footer a{
+    color: c("fg");
+    background: none;
+}
+
+header a:hover,
+.footer a:hover{
+    color: c("acc");
+
+    svg{
+        fill: c("acc");
+    }
+}
+
+img{
+    border-radius: .25rem;
+}
+
+.img-grayscale{
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+}
+
+.me{
+    svg{
+        fill: c("fg");
+    }
+}
+
+ul.no-style {
+    list-style: none;
+    padding: 0;
+}

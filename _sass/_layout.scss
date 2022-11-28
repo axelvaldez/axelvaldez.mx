@@ -1,0 +1,97 @@
+body {
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    max-width: 36rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 4rem;
+
+    @media (max-width: 600px){
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+
+        .logo {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.me{
+    display: flex;
+    align-items: start;
+
+    svg{
+        margin-top: .35rem;
+        height: 2.25rem;
+        width: auto;
+    }
+}
+
+nav ul{
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    margin: 0;
+
+    @media (max-width: 600px){
+        justify-content: start;
+        margin-left: -.5rem;
+
+        &:first-child{
+            margin-left: -1rem;
+        }
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-bottom: 1rem;
+}
+
+h1:not(.size-1){
+    margin-bottom: 3rem;
+    
+}
+
+h2:not(.size-1){
+    margin-top: 3rem;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+:last-child{
+    margin-bottom: 0;
+}
+
+.split {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 10rem auto;
+    align-items: start;
+
+    @media (max-width: 600px){
+        display: block;
+    }
+}
+
+.split:not(:last-child){
+    margin-bottom: 1rem;
+}
