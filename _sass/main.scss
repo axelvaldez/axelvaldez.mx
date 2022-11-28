@@ -87,9 +87,7 @@ nav ul{
     margin: 0;
 }
 
-h1,
-h1+p,
-h2 {
+.size-1{
     margin: 0 0 1rem;
     font-size: 1rem;
 }
@@ -103,16 +101,17 @@ h6,
 strong,
 b {
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
-.post h1{
+h1:not(.size-1){
     font-size: 3rem;
     line-height: 1.1;
     margin-bottom: 3rem;
     
 }
 
-.post h2{
+h2:not(.size-1){
     font-size: 1.25rem;
     line-height: 1.3;
     margin-top: 3rem;

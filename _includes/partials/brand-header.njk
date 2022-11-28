@@ -17,10 +17,10 @@
                 </path>
             </svg>
             <div class="ml-half">
-                {% if '/blog' in page.url %}
-                    <p class="mb-0 font-weight-bold">{{ site.name }}</p>
+                {% if page.url == '/' %}
+                    <h1 class="mb-0 size-1">{{ site.name }}</h1>
                 {% else %}
-                    <h1 class="mb-0">{{ site.name }}</h1>
+                    <p class="mb-0 font-weight-bold">{{ site.name }}</p>
                 {% endif %}
                 
                 <p>Design Engineer</p>
