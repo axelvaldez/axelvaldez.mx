@@ -7,27 +7,30 @@ html {
     font-size: 18px;
     font-family: "Karla", sans-serif;
     font-weight: 400;
+    background: c("bg") url(/assets/img/bg1.jpg);
 }
 
 body {
     margin: 0 auto;
     padding: 4rem 2rem;
     max-width: 36rem;
-    background: c("dark");
-    color: c("light-muted");
+    mix-blend-mode: multiply;
+    color: c("fg");
     line-height: 1.5;
 }
 
 a {
-    color: c("light-muted");
+    color: c("acc");
     text-decoration: none;
-    background: linear-gradient(transparent 95%, c("light-muted") 95%);
+    background-image: linear-gradient(transparent 95%, c("acc") 95%), linear-gradient(transparent 95%, c("bg-muted") 95%);
+    background-size: 0% 100%, 100% 100%;
     
 
     &:hover{
-        color: c("light");
+        color: c("acc");
         text-decoration: none;
-        background: linear-gradient(transparent 95%, c("light") 95%);
+        background-size: 100% 100%, 100% 100%;
+        transition: 1s ease-in background-size;
     }
 }
 
@@ -38,11 +41,11 @@ a {
 img{
     max-width: 100%;
     display: block;
-    border-radius: 2px;
+    border-radius: .25rem;
 
     &.img-grayscale{
         filter: grayscale(100%);
-        mix-blend-mode: screen;
+        mix-blend-mode: multiply;
     }
 }
 
@@ -51,10 +54,6 @@ header {
     justify-content: space-between;
     align-items: start;
     margin-bottom: 4rem;
-
-    a, a:hover{
-        background: none;
-    }
 }
 
 @media (max-width: 400px) {
@@ -76,12 +75,8 @@ header {
     svg{
         margin-top: .35rem;
         height: 2.25rem;
-        fill: c("light-muted");
+        fill: c("fg");
         width: auto;
-
-        &:hover{
-            fill: c("light");
-        }
     }
 }
 
@@ -90,11 +85,6 @@ nav ul{
     justify-content: end;
     align-items: start;
     margin: 0;
-}
-
-h1,
-h2 {
-    color: #fff;
 }
 
 h1,
@@ -118,13 +108,14 @@ b {
 .post h1{
     font-size: 3rem;
     line-height: 1.1;
+    margin-bottom: 3rem;
     
 }
 
 .post h2{
     font-size: 1.25rem;
-    font-weight: 400;
-    margin-top: 2rem;
+    line-height: 1.3;
+    margin-top: 3rem;
 }
 
 p{
@@ -156,6 +147,27 @@ ul.no-style {
     padding: 0;
 }
 
-.footer a, .footer a:hover{
+header a,
+.footer a{
+    color: c("fg");
     background: none;
+}
+
+header a:hover,
+.footer a:hover{
+    color: c("acc");
+
+    svg{
+        fill: c("acc");
+    }
+}
+
+.tag{
+    display: inline-block;
+    padding: 0 .5rem;
+    background: c("bg-muted");
+    color: c("fg");
+    text-transform: uppercase;
+    font-size: .8rem;
+    border-radius: .25rem;
 }

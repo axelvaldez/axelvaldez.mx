@@ -1,6 +1,6 @@
 {% include 'partials/header.njk' %}
 
-    <section class="bb-dark-muted mb-4 pb-4">
+    <section class="bb-bg-muted mb-4 pb-4">
         <h2>About</h2>
         <div class="split">
             <p><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
@@ -11,20 +11,20 @@
     </section>
 
 
-    <section class="bb-dark-muted mb-4 pb-4">
+    <section class="bb-bg-muted mb-4 pb-4">
         <h2>Latest Blog Posts</h2>
         <ul class="no-style">
             {%- for post in collections.posts | reverse -%}
                 <li class="split">
                     <span class="muted"><i class="i-calendar mr-half"></i>{{ post.date | readableDate }}</span>
-                    <p><a href="{{ post.url | url }}">{{ post.data.title }}</a></p>
+                    <p><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></p>
                 </li>
             {%- endfor -%}
             <li class="split"><span></span><span><a href="/blog">Visit the Blog &rarr;</a></span></li>
         </ul>
     </section>
 
-    <section class="bb-dark-muted mb-4 pb-4">
+    <section class="bb-bg-muted mb-4 pb-4">
         <h2>Experience</h2>
         <ul class="no-style">
             <li class="split">
@@ -68,16 +68,16 @@
 
     
 
-    <section class="bb-dark-muted mb-4 pb-4">
+    <section class="bb-bg-muted mb-4 pb-4">
         <h2>Projects</h2>
         <ul class="no-style">
             <li class="split">
-                <span><a href="https://htmlycss.com">HTMLyCSS</a></span>
-                <span>A blog about everything related to building websites, with a special focus in HTML and CSS. In spanish.</span>
+                <p><a href="https://htmlycss.com"><i class="i-bookmark mr-half"></i><strong>HTMLyCSS</strong></a></p>
+                <p>A blog about everything related to building websites, with a special focus in HTML and CSS. <span class="tag">In spanish</span></p>
             </li>
             <li class="split">
-                <span><a href="https://axel.mx">Axel MX</a></span>
-                <span>My Newsletter. In spanish.</span>
+                <p><a href="https://axel.mx"><i class="i-bookmark mr-half"></i><strong>Axel MX</strong></a></p>
+                <p>My Newsletter. <span class="tag">In spanish</span></p>
             </li>
         </ul>
     </section>

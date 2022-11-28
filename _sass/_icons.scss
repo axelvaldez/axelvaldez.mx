@@ -21,6 +21,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .i-bookmark:before {
+    content: "\e900";
+  }
   .i-calendar:before {
     content: "\e906";
   }
@@ -39,4 +42,5 @@
   .i-github:before {
     content: "\e905";
   }
+  
   
