@@ -6,7 +6,7 @@
         <ul class="no-style">
             {%- for post in collections.posts | reverse -%}
                 <li class="split mb-4 pb-4 bb-dark-muted">
-                    <span>{{ post.date | readableDate }}</span>
+                    <span class="muted"><i class="i-calendar mr-half"></i>{{ post.date | readableDate }}</span>
                     <div>
                         <p><a href="{{ post.url | url }}">{{ post.data.title }}</a></p>
                         <p class="muted">{{ post.templateContent | striptags(true) | truncate(140) }}</p>

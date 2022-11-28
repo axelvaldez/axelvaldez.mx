@@ -1,5 +1,6 @@
 
 @import '_vars';
+@import '_icons';
 @import '_overrides';
 
 html {
@@ -18,8 +19,16 @@ body {
 }
 
 a {
-    color: c("light");
+    color: c("light-muted");
     text-decoration: none;
+    background: linear-gradient(transparent 95%, c("light-muted") 95%);
+    
+
+    &:hover{
+        color: c("light");
+        text-decoration: none;
+        background: linear-gradient(transparent 95%, c("light") 95%);
+    }
 }
 
 .muted{
@@ -42,6 +51,10 @@ header {
     justify-content: space-between;
     align-items: start;
     margin-bottom: 4rem;
+
+    a, a:hover{
+        background: none;
+    }
 }
 
 @media (max-width: 400px) {
@@ -141,4 +154,8 @@ p{
 ul.no-style {
     list-style: none;
     padding: 0;
+}
+
+.footer a, .footer a:hover{
+    background: none;
 }

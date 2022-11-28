@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'avmx-icons';
+    src:  url('../fonts/avmx-icons.woff?818v0a') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'avmx-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .i-calendar:before {
+    content: "\e906";
+  }
+  .i-instagram:before {
+    content: "\e901";
+  }
+  .i-linkedin:before {
+    content: "\e902";
+  }
+  .i-dribbble:before {
+    content: "\e903";
+  }
+  .i-twitter:before {
+    content: "\e904";
+  }
+  .i-github:before {
+    content: "\e905";
+  }
+  
