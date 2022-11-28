@@ -17,3 +17,7 @@ When I'm not in front of my computer, I'm probably cooking, baking bread, or [ha
 - Woodworking. It all started with YouTube videos during the covid lockdown.
 - Stickers. I love them! In my previous job I was the sticker guy, and I kinda miss it.
 - I'm working in a fanzine right now. More about that soon. The web is more practical, but nothing beats the aesthetic of a paper zine. Also, there's a full conversation there about self-publishing, the DIY movement and underground press. Hopefully that will start some interesting blog posts.
+
+## This website
+
+This thing is built with [11ty](https://www.11ty.dev/), and hosted in [Netlify](https://netlify.com). [Source code available at Github](https://github.com/axelvaldez/axelvaldez.mx).
