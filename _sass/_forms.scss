@@ -1,0 +1,25 @@
+form{
+    label{
+        display: block;
+    }
+
+    input, textarea, .btn{
+        box-sizing: border-box;
+        background: c("bg");
+        color: c("fg");
+        border: none;
+        width: 100%;
+        border-radius: .25rem;
+        padding: .5rem;
+        mix-blend-mode: normal;
+        font-size: 1rem;
+        font-family: "karla", sans-serif;
+    }
+
+    .btn{
+        background-color: c("acc");
+        color: c("bg");
+        width: auto;
+        padding: .5rem 2rem;
+    }
+}

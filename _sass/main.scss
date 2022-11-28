@@ -1,6 +1,7 @@
 
 @import '_vars';
 @import '_icons';
+@import '_forms';
 @import '_overrides';
 
 html {
@@ -22,15 +23,16 @@ body {
 a {
     color: c("acc");
     text-decoration: none;
-    background-image: linear-gradient(transparent 95%, c("acc") 95%), linear-gradient(transparent 95%, c("bg-muted") 95%);
-    background-size: 0% 100%, 100% 100%;
+    background-image: linear-gradient(transparent 92%, c("acc") 92%), linear-gradient(transparent 92%, c("bg-muted") 92%);
+    background-size: 0 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transition: .2s ease-in all;
     
 
     &:hover{
-        color: c("acc");
         text-decoration: none;
         background-size: 100% 100%, 100% 100%;
-        transition: 1s ease-in background-size;
+        transition: .2s ease-in all;
     }
 }
 
