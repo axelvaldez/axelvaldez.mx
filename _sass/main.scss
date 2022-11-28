@@ -56,15 +56,15 @@ header {
     margin-bottom: 4rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     header {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: start;
         justify-content: start;
     }
 
     header .logo {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -85,6 +85,15 @@ nav ul{
     justify-content: end;
     align-items: start;
     margin: 0;
+
+    @media (max-width: 600px){
+        justify-content: start;
+        margin-left: -.5rem;
+
+        &:first-child{
+            margin-left: -1rem;
+        }
+    }
 }
 
 .size-1{
