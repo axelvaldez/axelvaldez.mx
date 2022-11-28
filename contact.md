@@ -5,7 +5,7 @@ layout: layouts/page.njk
 
 This form posts directly to my email inbox, but if you're just too cool to use forms, just send an email to <strong>axel<span class="d-none">REMOVETHIS</span>@paskola.com</strong>.
 
-<form action="/thanks" method="post" name="contact"><input type="hidden" name="form-name" value="contact">
+<form action="/thanks" method="post" name="contact" netlify><input type="hidden" name="form-name" value="contact">
     <div class="mb-1">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required="">
