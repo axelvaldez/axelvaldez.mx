@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 media_folder: "assets/img/uploads"
 
 collections:
@@ -12,5 +12,5 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Permalink", name: "permalink", widget: "hidden", default: "blog"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
