@@ -1,5 +1,6 @@
 
 const { DateTime } = require("luxon");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
@@ -11,5 +12,5 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("blog/*.md");
     });
+    eleventyConfig.addPlugin(pluginRss);
 };
-

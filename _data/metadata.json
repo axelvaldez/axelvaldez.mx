@@ -1,0 +1,9 @@
+{
+	"feed": {
+		"subtitle": "Personal website of Axel Valdez, Design Engineer living in Hermosillo, Mexico.",
+		"filename": "feed.xml",
+		"path": "/feed/feed.xml",
+		"url": "https://axelvaldez.mx/feed/feed.xml",
+		"id": "https://axelvaldez.mx/"
+	}
+}
