@@ -4,6 +4,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPassthroughCopy("favicon.*");
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("_redirects");
     eleventyConfig.addFilter("readableDate", dateObj => {
