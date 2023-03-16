@@ -47,18 +47,8 @@ img{
 }
 
 .mugshot-container{
-    position: relative;
-    svg{
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        path{
-            fill: c("acc");
-            mix-blend-mode: multiply;
-        }
-    }
+    background: c("bg-muted") url(/assets/img/axel-matte.png);
+    background-size: 100% 100%;
 }
 
 .me{
