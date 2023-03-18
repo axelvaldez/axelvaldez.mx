@@ -8,7 +8,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("_redirects");
     eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, {zone: 'America/Phoenix'}).toFormat("LLL dd, yyyy; HH:mm");
+        return DateTime.fromJSDate(dateObj, {zone: 'America/Phoenix'}).toFormat("LLL dd, yyyy");
     });
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("blog/*.md");
