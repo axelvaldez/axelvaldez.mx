@@ -8,11 +8,13 @@ html {
 h1:not(.size-1){
     font-size: 3rem;
     line-height: 1.1;
+    word-break: break-word;
 }
 
 h2:not(.size-1){
     font-size: 1.25rem;
     line-height: 1.3;
+    word-break: break-word;
 }
 
 .huge-copy{
