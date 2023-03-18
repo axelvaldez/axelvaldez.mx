@@ -1,0 +1,27 @@
+---
+# Metadata comes from _data/metadata.json
+permalink: "/feed/stream.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }} • Stream of consciousness</title>
+  <subtitle>A collection of random thoughts and things I notice in the world.</subtitle>
+  <link href="https://axelvaldez.mx/feed/stream.xml" rel="self"/>
+  <link href="{{ site.url }}"/>
+  <updated>{{ collections.stream | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.url }}</id>
+  <author>
+    <name>{{ site.author }}</name>
+    <email>{{ site.email }}</email>
+  </author>
+  {%- for post in collections.stream | reverse %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
