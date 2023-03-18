@@ -7,7 +7,7 @@
         <ul class="no-style">
             {%- for post in collections.stream | reverse -%}
                 <li class="split split-mini mb-4 pb-4 bbottom">
-                    <span class="muted"><a href="{{ post.url | url }}" title="{{ post.date | readableDate }}">#</a></span>
+                    <span><a href="{{ post.url | url }}" title="{{ post.date | readableDate }}">#</a></span>
                     <div>
                         {{ post.templateContent | safe }}
                     </div>
