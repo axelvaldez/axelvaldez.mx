@@ -87,8 +87,14 @@ p{
     grid-template-columns: 10rem auto;
     align-items: start;
 
+    &.split-mini{
+        grid-template-columns: 1rem auto;
+    }
+
     @media (max-width: 600px){
-        display: block;
+        &:not(.split-mini){
+            display: block;
+        }
     }
 }
 

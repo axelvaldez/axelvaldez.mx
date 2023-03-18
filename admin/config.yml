@@ -17,6 +17,17 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "stream" # Used in routes, e.g., /admin/collections/blog
+    label: "Stream" # Used in the UI
+    folder: "stream" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}{{month}}{{day}}{{hours}}{{minutes}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Permalink", name: "permalink", widget: "hidden", default: "stream/{{ page.date | date: '%Y%m%d%H%M%S' }}/index.html"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - label: "Pages"
     name: "pages"
     files:

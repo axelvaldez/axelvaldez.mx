@@ -13,5 +13,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("blog/*.md");
     });
+    eleventyConfig.addCollection("stream", function(collection) {
+        return collection.getFilteredByGlob("stream/*.md");
+    });
     eleventyConfig.addPlugin(pluginRss);
 };
