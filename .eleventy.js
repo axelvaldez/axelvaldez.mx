@@ -16,5 +16,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("stream", function(collection) {
         return collection.getFilteredByGlob("stream/*.md");
     });
+    eleventyConfig.addCollection("writing", function(collection) {
+        return collection.getFilteredByGlob(["blog/*.md", "stream/*.md"]);
+    });
     eleventyConfig.addPlugin(pluginRss);
 };

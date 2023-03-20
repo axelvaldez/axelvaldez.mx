@@ -2,6 +2,10 @@
     border-bottom: 1px solid c("bg-muted");
 }
 
+.btop{
+    border-top: 1px solid c("bg-muted");
+}
+
 .b{
     border: 1px solid c("bg-muted");
 }
@@ -85,4 +89,14 @@ $sizes: (
     margin: 0 0 1rem;
     font-size: 1rem;
 }
-  
+
+.posts > :first-child{
+    border-top: none !important;
+    padding-top: 0 !important;
+}
+
+.mobile-hide{
+    @media (max-width: 780px){
+        display: none;
+    }
+}

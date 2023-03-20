@@ -3,13 +3,26 @@
 
     <section>
         <h1 class="mb-1">{{ title }}</h1>
-        <p class="mb-4 muted">A collection of random thoughts and things I notice in the world.</p>
-        <ul class="no-style">
+        <p class="mb-4">Short posts on random thoughts and things I notice in the world. For medium to long form posts, visit <a href="/blog/">the blog</a>.</p>
+        <ul class="no-style posts">
+            {% set lastDate = "" %}
+            {% set dateChanged = true %}
             {%- for post in collections.stream | reverse -%}
-                <li class="split split-mini mb-4 pb-4 bbottom">
-                    <span><a href="{{ post.url | url }}" title="{{ post.date | readableDate }}">#</a></span>
-                    <div>
-                        {{ post.templateContent | safe }}
+
+                {% set thisPostDate %}{{ post.date | readableDate | truncate(15) }}{% endset %}
+                {% set dateChanged %}{{ 1 if thisPostDate != lastDate else 0 }}{% endset %}
+                {% if dateChanged %}{% set lastDate = thisPostDate %}{% endif %}
+
+                <li class="split {{ "btop mt-4 pt-4" if dateChanged == 1 }}">
+                    <span class="muted">{% if dateChanged == 1 %}<i class="i-calendar mr-half"></i>{{ thisPostDate }}{% endif %}</span>
+                    <div class="{{ "btop pt-4 mt-3" if dateChanged == 0 }}">
+                        {% if "/blog/" in post.url %}
+                            <h2 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h2>
+                            <p class="muted">{{ post.templateContent | striptags(true) | truncate(140) }}</p>
+                            <p><a href="{{ post.url | url }}">Read post &rarr;</a></p>  
+                        {% elif "/stream" in post.url %}
+                            {{ post.templateContent | safe }}
+                        {% endif %}
                     </div>
                 </li>
             {%- endfor -%}

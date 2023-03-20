@@ -1,7 +1,7 @@
 {% include 'partials/header.njk' %}
 
     <section class="bbottom mb-4 pb-4">
-        <h2 class="size-1">About</h2>
+        <h2>About</h2>
         <div class="split">
             <p class="mugshot-container"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
             <div>
@@ -11,78 +11,31 @@
     </section>
 
 
-    <section class="bbottom mb-4 pb-4">
-        <h2 class="size-1">Latest Blog Posts</h2>
-        <ul class="no-style">
-            {%- for post in collections.posts | reverse -%}
-                <li class="split">
-                    <span class="muted"><i class="i-calendar mr-half"></i>{{ post.date | readableDate }}</span>
-                    <p><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></p>
+    <section>
+        <h2>Latest Writing</h2>
+        <p>This section is a mix of <a href="/stream/">the stream</a> (very short, tweet-like posts) and medium to long form blog posts from <a href="/blog/">the blog</a>.<p>
+        <ul class="no-style posts">
+            {% set lastDate = "" %}
+            {% set dateChanged = true %}
+            {%- for post in collections.writing | reverse -%}
+
+                {% set thisPostDate %}{{ post.date | readableDate | truncate(15) }}{% endset %}
+                {% set dateChanged %}{{ 1 if thisPostDate != lastDate else 0 }}{% endset %}
+                {% if dateChanged %}{% set lastDate = thisPostDate %}{% endif %}
+
+                <li class="split {{ "btop mt-4 pt-4" if dateChanged == 1 }}">
+                    <span class="muted">{% if dateChanged == 1 %}<i class="i-calendar mr-half"></i>{{ thisPostDate }}{% endif %}</span>
+                    <div class="{{ "btop pt-4 mt-3" if dateChanged == 0 }}">
+                        {% if "/blog/" in post.url %}
+                            <h2 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h2>
+                            <p class="muted">{{ post.templateContent | striptags(true) | truncate(140) }}</p>
+                            <p><a href="{{ post.url | url }}">Read post &rarr;</a></p>  
+                        {% elif "/stream" in post.url %}
+                            {{ post.templateContent | safe }}
+                        {% endif %}
+                    </div>
                 </li>
             {%- endfor -%}
-            <li class="split"><span></span><span><a href="/blog">Visit the Blog &rarr;</a></span></li>
-        </ul>
-    </section>
-
-    <section class="bbottom mb-4 pb-4">
-        <h2 class="size-1">Work Experience</h2>
-        <ul class="no-style">
-            <li class="split">
-                <span class="muted"><i class="i-calendar mr-half"></i>Since 2021</span>
-                <div>
-                    <p class="mb-0"><strong>Lead UI Engineer @ LoanPro</strong></p>
-                    <p class="muted">Farmington, UT - Remote</p>
-                </div>
-            </li>
-            <li class="split">
-                <span class="muted"><i class="i-calendar mr-half"></i>2011 - 2021</span>
-                <div>
-                    <p class="mb-0"><strong>Design Engineer @ Nearsoft</strong></p>
-                    <p class="muted">Hermosillo, MX</p>
-                </div>
-            </li>
-            <li class="split">
-                <span class="muted"><i class="i-calendar mr-half"></i>2011</span>
-                <div>
-                    <p class="mb-0"><strong>UI Designer @ Internet Brands</strong></p>
-                    <p class="muted">Hermosillo, MX</p>
-                </div>
-            </li>
-            <li class="split">
-                <span class="muted"><i class="i-calendar mr-half"></i>2009 - 2011</span>
-                <div>
-                    <p class="mb-0"><strong>Self-employed UI Designer</strong></p>
-                    <p class="muted">Ciudad Obregon, MX</p>
-                </div>
-            </li>
-            <li class="split">
-                <span class="muted"><i class="i-calendar mr-half"></i>2005 - 2009</span>
-                <div>
-                    <p class="mb-0"><strong>UI Designer @ Novutek</strong></p>
-                    <p class="muted">Ciudad Obregon, MX</p>
-                </div>
-            </li>
-            <li class="split"><span></span><span><a href="https://linkedin.com/in/axelvaldez">More at LinkedIn &rarr;</a></span></li>
-        </ul>
-    </section>
-
-    
-
-    <section class="bbottom mb-4 pb-4">
-        <h2 class="size-1">Projects</h2>
-        <ul class="no-style">
-            <li class="split">
-                <p><a href="https://photos.axelvaldez.mx"><i class="i-bookmark mr-half"></i><strong>Photos</strong></a></p>
-                <p>A simple website for sharing personal my photo albums.</p>
-            </li>
-            <li class="split">
-                <p><a href="https://htmlycss.com"><i class="i-bookmark mr-half"></i><strong>HTMLyCSS</strong></a></p>
-                <p>A blog about everything related to building websites, with a special focus in HTML and CSS. <span class="tag">In spanish</span></p>
-            </li>
-            <li class="split">
-                <p><a href="https://axel.mx"><i class="i-bookmark mr-half"></i><strong>Axel MX</strong></a></p>
-                <p>My Newsletter. <span class="tag">In spanish</span></p>
-            </li>
         </ul>
     </section>
 

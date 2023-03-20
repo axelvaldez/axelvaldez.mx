@@ -3,9 +3,9 @@
 
     <section>
         <h1>The Blog</h1>
-        <ul class="no-style">
+        <ul class="posts no-style">
             {%- for post in collections.posts | reverse -%}
-                <li class="split mb-4 pb-4 bbottom">
+                <li class="split mt-4 pt-4 btop">
                     <span class="muted"><i class="i-calendar mr-half"></i>{{ post.date | readableDate }}</span>
                     <div>
                         <h2 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h2>

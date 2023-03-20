@@ -1,7 +1,8 @@
 {% include 'partials/header.njk' %}
 
-    <section class="bbottom pb-4 mb-4">
-        <h1>{{ title }}</h1>
+    <section>
+        <h1 class="{{ "mb-1" if description != "" else "mb-4" }}">{{ title }}</h1>
+        {% if description != "" %} <p class="mb-4">{{ description | safe }}</p>{% endif %}
         {{ content | safe }}
     </section>
     

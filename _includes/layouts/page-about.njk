@@ -1,0 +1,75 @@
+{% include 'partials/header.njk' %}
+
+    <section class="bbottom pb-4 mb-4">
+        <h1 class="mb-1">{{ title }}</h1>
+        <div class="split">
+        <p class="mugshot-container"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
+        <div>
+            {{ content | safe }}
+        </div>
+    </div>
+    </section>
+
+    <section class="bbottom mb-4 pb-4">
+        <h2>Work Experience</h2>
+        <ul class="no-style">
+            <li class="split">
+                <span class="muted"><i class="i-calendar mr-half"></i>Since 2021</span>
+                <div>
+                    <p class="mb-0"><strong>Lead UI Engineer @ LoanPro</strong></p>
+                    <p class="muted">Farmington, UT - Remote</p>
+                </div>
+            </li>
+            <li class="split">
+                <span class="muted"><i class="i-calendar mr-half"></i>2011 - 2021</span>
+                <div>
+                    <p class="mb-0"><strong>Design Engineer @ Nearsoft</strong></p>
+                    <p class="muted">Hermosillo, MX</p>
+                </div>
+            </li>
+            <li class="split">
+                <span class="muted"><i class="i-calendar mr-half"></i>2011</span>
+                <div>
+                    <p class="mb-0"><strong>UI Designer @ Internet Brands</strong></p>
+                    <p class="muted">Hermosillo, MX</p>
+                </div>
+            </li>
+            <li class="split">
+                <span class="muted"><i class="i-calendar mr-half"></i>2009 - 2011</span>
+                <div>
+                    <p class="mb-0"><strong>Self-employed UI Designer</strong></p>
+                    <p class="muted">Ciudad Obregon, MX</p>
+                </div>
+            </li>
+            <li class="split">
+                <span class="muted"><i class="i-calendar mr-half"></i>2005 - 2009</span>
+                <div>
+                    <p class="mb-0"><strong>UI Designer @ Novutek</strong></p>
+                    <p class="muted">Ciudad Obregon, MX</p>
+                </div>
+            </li>
+            <li class="split"><span></span><span><a href="https://linkedin.com/in/axelvaldez">More at LinkedIn &rarr;</a></span></li>
+        </ul>
+    </section>
+
+    
+
+    <section class="">
+        <h2>Projects</h2>
+        <ul class="no-style">
+            <li class="split">
+                <p><a href="https://photos.axelvaldez.mx"><i class="i-bookmark mr-half"></i><strong>Photos</strong></a></p>
+                <p>A simple website for sharing personal my photo albums.</p>
+            </li>
+            <li class="split">
+                <p><a href="https://htmlycss.com"><i class="i-bookmark mr-half"></i><strong>HTMLyCSS</strong></a></p>
+                <p>A blog about everything related to building websites, with a special focus in HTML and CSS. <span class="tag">In spanish</span></p>
+            </li>
+            <li class="split">
+                <p><a href="https://axel.mx"><i class="i-bookmark mr-half"></i><strong>Axel MX</strong></a></p>
+                <p>My Newsletter. <span class="tag">In spanish</span></p>
+            </li>
+        </ul>
+    </section>
+    
+{% include 'partials/footer.njk' %}
