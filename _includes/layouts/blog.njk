@@ -4,7 +4,7 @@
     <section>
         <h1>The Blog</h1>
         <ul class="posts no-style">
-            {%- for post in collections.posts | reverse -%}
+            {%- for post in paginatedBlog-%}
                 <li class="split mt-4 pt-4 btop">
                     <span class="muted"><i class="i-calendar mr-half"></i>{{ post.date | readableDate }}</span>
                     <div>
@@ -16,6 +16,13 @@
                 </li>
             {%- endfor -%}
         </ul>
+
+        {% if pagination.href.previous or  pagination.href.next %}
+        <div class="split split-half mt-4 pt-4 btop">
+            <span class="text-left">{% if pagination.href.previous %}<a href="{{pagination.href.previous }}">&larr; Newer posts</a>{% endif %}</span>
+            <span class="text-right">{% if pagination.href.next %}<a href="{{pagination.href.next }}">Older Posts &rarr;</a>{% endif %}</span>
+        </div>
+        {% endif %}
     </section>
 
    

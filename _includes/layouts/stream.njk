@@ -7,7 +7,7 @@
         <ul class="no-style posts">
             {% set lastDate = "" %}
             {% set dateChanged = true %}
-            {%- for post in collections.stream | reverse -%}
+            {%- for post in paginatedStream -%}
 
                 {% set thisPostDate %}{{ post.date | readableDate | truncate(15) }}{% endset %}
                 {% set dateChanged %}{{ 1 if thisPostDate != lastDate else 0 }}{% endset %}
@@ -27,6 +27,12 @@
                 </li>
             {%- endfor -%}
         </ul>
+        {% if pagination.href.previous or  pagination.href.next %}
+        <div class="split split-half mt-4 pt-4 btop">
+            <span class="text-left">{% if pagination.href.previous %}<a href="{{pagination.href.previous }}">&larr; Newer posts</a>{% endif %}</span>
+            <span class="text-right">{% if pagination.href.next %}<a href="{{pagination.href.next }}">Older Posts &rarr;</a>{% endif %}</span>
+        </div>
+        {% endif %}
     </section>
 
    

@@ -15,9 +15,9 @@
         <h2>Latest Writing</h2>
         <p>This section is a mix of <a href="/stream/">the stream</a> (very short, tweet-like posts) and medium to long form blog posts from <a href="/blog/">the blog</a>.<p>
         <ul class="no-style posts">
-            {% set lastDate = "" %}
+            {% set lastDate = "" %} 
             {% set dateChanged = true %}
-            {%- for post in collections.writing | reverse -%}
+            {%- for post in paginatedWriting -%}
 
                 {% set thisPostDate %}{{ post.date | readableDate | truncate(15) }}{% endset %}
                 {% set dateChanged %}{{ 1 if thisPostDate != lastDate else 0 }}{% endset %}
@@ -37,6 +37,16 @@
                 </li>
             {%- endfor -%}
         </ul>
+
+        {% if pagination.href.previous or  pagination.href.next %}
+        <div class="split split-half mt-4 pt-4 btop">
+            <span class="text-left">{% if pagination.href.previous %}<a href="{{pagination.href.previous }}">&larr; Newer posts</a>{% endif %}</span>
+            <span class="text-right">{% if pagination.href.next %}<a href="{{pagination.href.next }}">Older Posts &rarr;</a>{% endif %}</span>
+        </div>
+        {% endif %}
+
+        
+        
     </section>
 
     <script>

@@ -91,6 +91,10 @@ p{
         grid-template-columns: 1rem auto;
     }
 
+    &.split-half{
+        grid-template-columns: 1fr 1fr;
+    }
+
     @media (max-width: 600px){
         &:not(.split-mini){
             display: block;
@@ -100,4 +104,16 @@ p{
 
 .split:not(:last-child){
     margin-bottom: 1rem;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
 }
