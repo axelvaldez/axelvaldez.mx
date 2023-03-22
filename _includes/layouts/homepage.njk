@@ -1,52 +1,53 @@
 {% include 'partials/header.njk' %}
 
     <section class="bbottom mb-4 pb-4">
-        <h2>About</h2>
-        <div class="split">
-            <p class="mugshot-container"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
+        <h2 class="h1">Hello, I'm Axel.</h2>
+        <div class="split split-reverse lead">
             <div>
                 {{ content | safe }}
             </div>
+            <p class="mugshot-container"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
         </div>
     </section>
 
 
     <section>
-        <h2>Latest Writing</h2>
-        <p>This section is a mix of <a href="/stream/">the stream</a> (very short, tweet-like posts) and medium to long form blog posts from <a href="/blog/">the blog</a>.<p>
-        <ul class="no-style posts">
-            {% set lastDate = "" %} 
-            {% set dateChanged = true %}
-            {%- for post in paginatedWriting -%}
-
-                {% set thisPostDate %}{{ post.date | readableDate | truncate(15) }}{% endset %}
-                {% set dateChanged %}{{ 1 if thisPostDate != lastDate else 0 }}{% endset %}
-                {% if dateChanged %}{% set lastDate = thisPostDate %}{% endif %}
-
-                <li class="split {{ "btop mt-4 pt-4" if dateChanged == 1 }}">
-                    <span class="muted">{% if dateChanged == 1 %}<i class="i-calendar mr-half"></i>{{ thisPostDate }}{% endif %}</span>
-                    <div class="{{ "btop pt-4 mt-3" if dateChanged == 0 }}">
-                        {% if "/blog/" in post.url %}
-                            <h2 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h2>
-                            <p class="muted">{{ post.templateContent | striptags(true) | truncate(140) }}</p>
-                            <p><a href="{{ post.url | url }}">Read post &rarr;</a></p>  
-                        {% elif "/stream" in post.url %}
-                            {{ post.templateContent | safe }}
-                        {% endif %}
+        <h2 class="mt-0">Writing</h2>
+        <div class="split large-gap">
+            <div class="pb-3">
+                <p>This section is a mix of <a href="/stream/">the stream</a> (very short, tweet-like posts) and medium to long form blog posts from <a href="/blog/">the blog</a>.<p>
+            </div>
+            <div>
+                <ul class="no-style posts mt-0">
+                    {%- for post in paginatedWriting -%}
+                        <li class="bbottom pb-3 mb-3">
+                            
+                                {% if "/blog/" in post.url %}
+                                    <h3 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h3>
+                                    <p>{{ post.templateContent | striptags(true) | truncate(140) }}</p>
+                                    <p>
+                                        <span class="muted">{{ post.date | readableDate | truncate(15) }}</span>
+                                        <span class="muted mx-half">&middot;</span>
+                                        <a href="{{ post.url | url }}">Read post &rarr;</a>
+                                    </p>  
+                                {% elif "/stream" in post.url %}
+                                    {{ post.templateContent | safe }}
+                                    <p class="mb-0"><a class="stealth small" href="{{ post.url | url }}">{{ post.date | readableDate | truncate(15) }}</a></p>
+                                {% endif %}
+                            
+                        </li>
+                    {%- endfor -%}
+                </ul>
+                {% if pagination.href.previous or  pagination.href.next %}
+                    <div class="split split-half">
+                        <span class="text-left">{% if pagination.href.previous %}<a href="{{pagination.href.previous }}">&larr; Newer posts</a>{% endif %}</span>
+                        <span class="text-right">{% if pagination.href.next %}<a href="{{pagination.href.next }}">Older Posts &rarr;</a>{% endif %}</span>
                     </div>
-                </li>
-            {%- endfor -%}
-        </ul>
-
-        {% if pagination.href.previous or  pagination.href.next %}
-        <div class="split split-half mt-4 pt-4 btop">
-            <span class="text-left">{% if pagination.href.previous %}<a href="{{pagination.href.previous }}">&larr; Newer posts</a>{% endif %}</span>
-            <span class="text-right">{% if pagination.href.next %}<a href="{{pagination.href.next }}">Older Posts &rarr;</a>{% endif %}</span>
+                {% else %}
+                    <p class="muted">Looking for more? Find the rest of the posts in <a href="/blog/">the blog</a> or <a href="/stream/">the stream</a>.</p>
+                {% endif %}
+            </div>      
         </div>
-        {% endif %}
-
-        
-        
     </section>
 
     <script>

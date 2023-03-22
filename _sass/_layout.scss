@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     padding: 4rem 2rem;
-    max-width: 36rem;
+    max-width: 50rem;
 }
 
 img{
@@ -84,8 +84,14 @@ p{
 .split {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 10rem auto;
+    grid-template-columns: 15rem auto;
     align-items: start;
+
+    &.large-gap{
+        @media (min-width: 1000px){
+            grid-gap: 7.5rem;    
+        }
+    }
 
     &.split-mini{
         grid-template-columns: 1rem auto;
@@ -95,7 +101,11 @@ p{
         grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: 600px){
+    &.split-reverse{
+        grid-template-columns: auto 10rem;
+    }
+
+    @media (max-width: 800px){
         &:not(.split-mini){
             display: block;
         }

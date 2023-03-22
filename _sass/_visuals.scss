@@ -13,9 +13,14 @@ a {
     background-size: 0 100%, 100% 100%;
     background-repeat: no-repeat;
     transition: .2s ease-in background-size;
+
+    &.stealth{
+        color: c("fg-muted");
+    }
     
 
     &:hover{
+        color: c("acc");
         text-decoration: none;
         background-size: 100% 100%, 100% 100%;
         transition: .2s ease-in background-size;

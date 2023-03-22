@@ -1,8 +1,10 @@
 {% include 'partials/header.njk' %}
 
     <section>
-        <div class="huge-copy mb-2">{{ content | safe }}</div>
-        <p class="muted"><i class="i-calendar mr-half"></i>{{ date  | readableDate }}</p>
+        <div class="split">
+            <p class="muted"><i class="i-calendar mr-half"></i>{{ date  | readableDate }}</p>
+            <div class="lead">{{ content | safe }}</div>
+        </div>
     </section>
     
 {% include 'partials/footer.njk' %}

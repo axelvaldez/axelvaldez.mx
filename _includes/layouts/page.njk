@@ -2,7 +2,7 @@
 
     <section>
         <h1 class="{{ "mb-1" if description != "" else "mb-4" }}">{{ title }}</h1>
-        {% if description != "" %} <p class="mb-4">{{ description | safe }}</p>{% endif %}
+        {% if description != "" %} <p class="mb-4 lead muted">{{ description | safe }}</p>{% endif %}
         {{ content | safe }}
     </section>
     
