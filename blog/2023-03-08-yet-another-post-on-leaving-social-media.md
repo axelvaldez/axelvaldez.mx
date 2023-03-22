@@ -6,6 +6,8 @@ layout: layouts/post.njk
 ---
 I used to believe that social media kept me connected to the people I love, like, and enjoy, but I now realize that this couldn't be further from the truth. Although social media gives me the impression that I'm in touch with many individuals, broadcasting random thoughts and out-of-context ideas ultimately leads to a lack of genuine communication. The worst thing is that this false sense of connection provides me with temporary satisfaction that prevents me from forming real connections with the people I care about.
 
+<!-- more -->
+
 By social media I mean Twitter, Instagram, BeReal, and all of those applications where we share content publicly or semi-publicly. WhatsApp, for example, does not fit my definition of a social network, much like a phone is not considered a social app.
 
 But understanding this doesn’t make stopping using social apps any easier. The second I stop doing something and lay back, my fingers start trying to tap Twitter or Instagram. When I’m bored, my first instinct is not to look for something to watch on TV or listen to, but to open Instagram and swipe through the latest stories of my contacts.

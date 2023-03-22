@@ -7,9 +7,11 @@ layout: layouts/post.njk
 
 I constantly find myself looking for free PSD mockups to present work, usually for small things like stickers, mugs, or posters. Today I couldn’t find a decent one for a set of stickers, and instead of buying a premium one, I decided to scratch my own itch, make my own and share it with you.
 
+<!-- more -->
+
 ![Sticker PSD Mockup sample](/assets/img/posts/sticker-mockup-sample.jpg)
 
-## How to use it
+### How to use it
 
 Usage is fairly easy:
 
@@ -24,8 +26,8 @@ Usage is fairly easy:
 
 The mockup automagically adds padding to your artwork, so there’s no need to worry about that. Just copy and paste as it is.
 
-## Download it
+### Download it
 
-[Free Sticker PSD Mockup — Download](/assets/downloads/axelvaldez-sticker-mockup.psd.zip)
+<p class="text-center my-4"><a href="/assets/downloads/axelvaldez-sticker-mockup.psd.zip" class="btn text-center mx-auto">Download<br><small>Free Sticker PSD Mockup</small></a></p>
 
 You can use it for whatever you want, no strings attached. If you like it, recommend it to your friends. For any comments, I’m [@axelvaldezmx](https://twitter.com/axelvaldezmx) on Twitter.

@@ -43,7 +43,7 @@ header a:hover,
 }
 
 img{
-    border-radius: .25rem;
+    @extend .rounded;
 }
 
 .img-grayscale{
@@ -65,4 +65,93 @@ img{
 ul.no-style {
     list-style: none;
     padding: 0;
+}
+
+.rounded{
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.stream-card{
+    background: c("bg-muted");
+}
+
+.stream-card-single{
+    position: relative;
+    overflow: visible;
+
+    &::before, &::after{
+        content: "";
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        position: absolute;
+        top: -2rem;
+        left: 2rem;
+        // transform: translatex(-50%);
+        border: 2px solid c("bg");
+    }
+    
+    &::before{
+        
+        background-color: c("bg-muted");
+        background-image: url(/assets/img/axel-matte.png), linear-gradient(c("bg-muted"),c("bg"));
+        background-size: 100%;
+    }
+
+    &::after{
+        background: url(/assets/img/axel.jpg);
+        background-size: 100%;
+        filter: grayscale(100);
+        mix-blend-mode: multiply;
+    }
+}
+
+.homepage-blog-post:not(:first-child){
+    margin-top: 3rem;
+    padding-top: 3rem;
+    @extend .div-top;
+}
+
+.homepage-blog-post + .homepage-blog-post{
+    padding-top: 0;
+    margin-top: 0;
+    &::before{
+        content: "";
+        display: none;
+    }
+}
+
+.div-top{
+    position: relative;
+
+    &::before{
+        content: "";
+        position:absolute;
+        top: 0;
+        width: 5rem;
+        height: .25rem;
+        background: c("bg-muted");
+        margin: 0 auto;
+        left: 50%;
+        transform: translatex(-50%);
+        border-radius: 10px;
+    }
+}
+
+.div-bottom{
+    position: relative;
+
+    &::after{
+        content: "";
+        position:absolute;
+        bottom: -3px;
+        width: 5rem;
+        height: .25rem;
+        background: c("bg-muted");
+        margin: 0 auto;
+        left: 50%;
+        transform: translatex(-50%);
+        border-radius: 10px;
+    }
 }

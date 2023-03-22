@@ -3,14 +3,17 @@
 
     <section>
         <h1 class="mb-1">The Blog</h1>
-        <p class="mb-4 lead muted">Notes on stuff I'm thinking about. For short-form posts, visit <a href="/stream/">the stream</a>.</p>
+        <p class="mb-4 lead muted"><em>Notes on stuff I'm thinking about. For short-form posts, visit <a href="/stream/">the stream</a>.</em></p>
         <ul class="posts no-style">
             {%- for post in paginatedBlog-%}
                 <li class="split mt-4 pt-4 btop">
                     <p class="mt-half muted"><i class="i-calendar mr-half"></i>{{ post.date | readableDate }}</p>
                     <div>
                         <h2 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h2>
-                        <p class="muted">{{ post.templateContent | safe }}</p>
+                        {% if post.data.desc %}<p class="lead muted"><em>{{ post.data.desc }}</em></p>{% endif %}
+                        {% set preview = post.templateContent.split('<!-- more -->') %}
+                        <p class="muted">{{ preview[0] | safe }}</p>
+                        <p><a href="{{ post.url | url }}">Continue reading &rarr;</a></p>
                     </div>
                 </li>
             {%- endfor -%}

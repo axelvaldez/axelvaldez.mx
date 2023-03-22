@@ -6,7 +6,7 @@
             <div>
                 {{ content | safe }}
             </div>
-            <p class="mugshot-container"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
+            <p class="mugshot-container rounded"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
         </div>
     </section>
 
@@ -18,9 +18,9 @@
                 <p>This section is a mix of <a href="/stream/">the stream</a> (very short, tweet-like posts) and medium to long form blog posts from <a href="/blog/">the blog</a>.<p>
             </div>
             <div>
-                <ul class="no-style posts mt-0">
+                <ul class="no-style mt-0">
                     {%- for post in paginatedWriting -%}
-                        <li class="bbottom pb-3 mb-3">
+                        <li class="homepage-{{ "blog-post div-bottom pb-3 mb-3" if "/blog/" in post.url  }}{{ "stream-post stream-card p-2 rounded mb-1" if "/stream/" in post.url  }}">
                             
                                 {% if "/blog/" in post.url %}
                                     <h3 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h3>

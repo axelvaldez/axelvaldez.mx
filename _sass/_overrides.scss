@@ -10,6 +10,10 @@
     border: 1px solid c("bg-muted");
 }
 
+.b-2{
+    border-width: 2px;
+}
+
 // BOOTSTRAP-LIKE MARGIN AND PADDING OVERRIDES
 $prefixes: (
     "": "",

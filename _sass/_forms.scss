@@ -3,7 +3,7 @@ form{
         display: block;
     }
 
-    input, textarea, .btn{
+    input, textarea{
         box-sizing: border-box;
         background: c("bg-muted");
         color: c("fg");
@@ -16,10 +16,22 @@ form{
         font-family: "karla", sans-serif;
     }
 
-    .btn{
-        background-color: c("acc");
-        color: c("bg");
-        width: auto;
-        padding: .5rem 2rem;
+    
+}
+
+form .btn, a.btn{
+    border: none;
+    border-radius: .25rem;
+    font-size: 1rem;
+    background-color: c("acc");
+    background-image: none;
+    color: c("bg");
+    width: auto;
+    padding: .5rem 2rem;
+    display: inline-block;
+    transition: .1s ease-in all;
+
+    &:hover{
+        transform: scale(1.05);
     }
 }

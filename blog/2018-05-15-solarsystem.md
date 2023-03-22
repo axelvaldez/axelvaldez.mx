@@ -1,5 +1,6 @@
 ---
 title: The solar system dimensions and my ignorance
+desc: A tale of good intentions and either ingenuity or plain ignorance.
 date: 2018-05-15
 permalink: "blog/{{ title | slugify }}/index.html"
 layout: layouts/post.njk
@@ -10,6 +11,8 @@ When we moved into the house where my family and I live, it occurred to me that 
 And it would be a lot cooler —I thought— if the distances between the planets’ orbits and their size were proportional to their real-life counterparts, the light bulb in the center of the ceiling being the sun. I got really excited.
 
 With all the excitement still in me, I got in front of my computer to calculate said distances. That’s when it hit me: I knew nothing about the solar system size.
+
+<!-- more -->
 
 If a common light bulb is 6 centimeters wide, and I made all the sizes and distances proportional, Uranus would have to be located at 193 kilometers from the bulb.
 

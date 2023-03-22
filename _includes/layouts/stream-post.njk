@@ -1,9 +1,11 @@
 {% include 'partials/header.njk' %}
 
     <section>
-        <div class="split">
-            <p class="muted"><i class="i-calendar mr-half"></i>{{ date  | readableDate }}</p>
-            <div class="lead">{{ content | safe }}</div>
+        <div class="center-constrained">
+            <div class="lead stream-card stream-card-single rounded p-2 pt-3">
+                {{ content | safe }}
+                <p class="muted small mb-0">{{ date  | readableDate }}</p>
+            </div>
         </div>
     </section>
     

@@ -3,36 +3,25 @@
 
     <section>
         <h1 class="mb-1">{{ title }}</h1>
-        <p class="mb-4 lead muted">Short posts on random thoughts and things I notice in the world. For medium to long form posts, visit <a href="/blog/">the blog</a>.</p>
-        <ul class="no-style posts">
-            {% set lastDate = "" %}
-            {% set dateChanged = true %}
-            {%- for post in paginatedStream -%}
-
-                {% set thisPostDate %}{{ post.date | readableDate | truncate(15) }}{% endset %}
-                {% set dateChanged %}{{ 1 if thisPostDate != lastDate else 0 }}{% endset %}
-                {% if dateChanged %}{% set lastDate = thisPostDate %}{% endif %}
-
-                <li class="split {{ "btop mt-4 pt-4" if dateChanged == 1 }}">
-                    <span class="muted">{% if dateChanged == 1 %}<i class="i-calendar mr-half"></i>{{ thisPostDate }}{% endif %}</span>
-                    <div class="{{ "btop pt-4 mt-3" if dateChanged == 0 }}">
-                        {% if "/blog/" in post.url %}
-                            <h2 class="mt-0"><a href="{{ post.url | url }}"><strong>{{ post.data.title }}</strong></a></h2>
-                            <p class="muted">{{ post.templateContent | striptags(true) | truncate(140) }}</p>
-                            <p><a href="{{ post.url | url }}">Read post &rarr;</a></p>  
-                        {% elif "/stream" in post.url %}
-                            {{ post.templateContent | safe }}
-                        {% endif %}
-                    </div>
-                </li>
-            {%- endfor -%}
-        </ul>
-        {% if pagination.href.previous or  pagination.href.next %}
-        <div class="split split-half mt-4 pt-4 btop">
-            <span class="text-left">{% if pagination.href.previous %}<a href="{{pagination.href.previous }}">&larr; Newer posts</a>{% endif %}</span>
-            <span class="text-right">{% if pagination.href.next %}<a href="{{pagination.href.next }}">Older Posts &rarr;</a>{% endif %}</span>
+        <p class="mb-4 lead muted"><em>Short posts on random thoughts and things I notice in the world. For medium to long form posts, visit <a href="/blog/">the blog</a>.</em></p>
+        <div class="center-constrained">
+            <ul class="no-style posts">
+                {%- for post in paginatedStream -%}
+                    <li>
+                        <div class="stream-card p-2 mb-1 rounded">
+                                {{ post.templateContent | safe }}
+                                <p class="mb-0 small"><a class="stealth" href="{{ post.url | url }}">{{ post.date | readableDate | truncate(15) }}</a></a>
+                        </div>
+                    </li>
+                {%- endfor -%}
+            </ul>
+            {% if pagination.href.previous or  pagination.href.next %}
+            <div class="split split-half mt-2">
+                <span class="text-left">{% if pagination.href.previous %}<a href="{{pagination.href.previous }}">&larr; Newer posts</a>{% endif %}</span>
+                <span class="text-right">{% if pagination.href.next %}<a href="{{pagination.href.next }}">Older Posts &rarr;</a>{% endif %}</span>
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </section>
 
    
