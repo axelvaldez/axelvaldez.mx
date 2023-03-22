@@ -1,13 +1,15 @@
 {% include 'partials/header.njk' %}
 
     <section class="bbottom pb-4 mb-4">
-        <h1 class="mb-1">{{ title }}</h1>
+        <h1 class="mb-3">{{ title }}</h1>
         <div class="split">
-        <p class="mugshot-container rounded"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
-        <div>
-            {{ content | safe }}
+            <div class="pr-2 pb-3">
+                <p class="mugshot-container rounded"><img src="/assets/img/axel.jpg" class="img-grayscale" alt="Hi"></p>
+            </div>
+            <div>
+                {{ content | safe }}
+            </div>
         </div>
-    </div>
     </section>
 
     <section class="bbottom mb-4 pb-4">
