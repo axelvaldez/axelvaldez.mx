@@ -14,7 +14,7 @@ With all the excitement still in me, I got in front of my computer to calculate 
 
 <!-- more -->
 
-If a common light bulb is 6 centimeters wide, and I made all the sizes and distances proportional, Uranus would have to be located at 193 kilometers from the bulb.
+If a common light bulb is 6 centimeters wide, and I made all the sizes and distances proportional, Neptune would have to be located at 193 meters from the bulb.
 
 My kid’s room is not that big.
 
