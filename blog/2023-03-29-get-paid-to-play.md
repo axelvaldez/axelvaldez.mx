@@ -1,6 +1,6 @@
 ---
 title: Get paid for playing
-date: 2023-03-30T23:55:58.697Z
+date: 2023-03-29T23:55:58.697Z
 permalink: blog/{{ title | slugify }}/index.html
 layout: layouts/post.njk
 ---
