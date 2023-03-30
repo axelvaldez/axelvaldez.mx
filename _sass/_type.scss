@@ -51,3 +51,30 @@ h3{
     font-size: 1.25rem;
     line-height: 1.5;
 }
+
+blockquote{
+    @extend .lead;
+    font-style: italic;
+    color: c("fg-muted");
+    position: relative;
+
+    &::before{
+        content: open-quote;
+        color: c("bg-muted");
+        font-size: 5rem;
+        position: absolute;
+        left: -2rem;
+        top: -2.3rem;
+        z-index: -1;
+    }
+
+    &::after{
+        content: close-quote;
+        color: c("bg-muted");
+        font-size: 5rem;
+        position: absolute;
+        right: -1rem;
+        bottom: -3.3rem;
+        z-index: -1;
+    }
+}
