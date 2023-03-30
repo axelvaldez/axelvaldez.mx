@@ -5,8 +5,8 @@ form{
 
     input, textarea{
         box-sizing: border-box;
-        background: c("bg-muted");
-        color: c("fg");
+        background: var(--bg-muted);
+        color: var(--fg);
         border: none;
         width: 100%;
         border-radius: .25rem;
@@ -23,9 +23,9 @@ form .btn, a.btn{
     border: none;
     border-radius: .25rem;
     font-size: 1rem;
-    background-color: c("acc");
+    background-color: var(--acc);
     background-image: none;
-    color: c("bg");
+    color: var(--bg);
     width: auto;
     padding: .5rem 2rem;
     display: inline-block;

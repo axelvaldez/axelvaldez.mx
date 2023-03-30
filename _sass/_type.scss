@@ -55,12 +55,12 @@ h3{
 blockquote{
     @extend .lead;
     font-style: italic;
-    color: c("fg-muted");
+    color: var(--fg-muted);
     position: relative;
 
     &::before{
         content: open-quote;
-        color: c("bg-muted");
+        color: var(--bg-muted);
         font-size: 5rem;
         position: absolute;
         left: -2rem;
@@ -70,7 +70,7 @@ blockquote{
 
     &::after{
         content: close-quote;
-        color: c("bg-muted");
+        color: var(--bg-muted);
         font-size: 5rem;
         position: absolute;
         right: -1rem;

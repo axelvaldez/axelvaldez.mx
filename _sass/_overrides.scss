@@ -1,13 +1,13 @@
 .bbottom{
-    border-bottom: 1px solid c("bg-muted");
+    border-bottom: 1px solid var(--bg-muted);
 }
 
 .btop{
-    border-top: 1px solid c("bg-muted");
+    border-top: 1px solid var(--bg-muted);
 }
 
 .b{
-    border: 1px solid c("bg-muted");
+    border: 1px solid var(--bg-muted);
 }
 
 .b-2{
@@ -78,15 +78,15 @@ $sizes: (
 .tag{
     display: inline-block;
     padding: 0 .5rem;
-    background: c("bg-muted");
-    color: c("fg");
+    background: var(--bg-muted);
+    color: var(--fg);
     text-transform: uppercase;
     font-size: .8rem;
     border-radius: .25rem;
 }
 
 .muted{
-    color: c("fg-muted");
+    color: var(--fg-muted);
 }
 
 .size-1{
