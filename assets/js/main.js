@@ -1,7 +1,15 @@
-darkMode = document.getElementById("toggle");
-rootNode = document.querySelector(":root");
+const darkMode = document.getElementById("toggle");
+const rootNode = document.querySelector(":root");
+const osPrefsDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false;
+const manualPref = localStorage.getItem("theme");
 
-manualDarkMode = localStorage.getItem("theme");
+if( manualPref != "light" && manualPref != "dark"){
+    dark(osPrefsDark);
+}else if (manualPref == "light"){
+    dark(false);
+}else{
+    dark(true);
+}
 
 function dark(enable){
     if (enable){
@@ -13,19 +21,6 @@ function dark(enable){
         darkMode.checked = false;
         localStorage.setItem("theme", "light");
     }
-}
-
-if (
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    && manualDarkMode != "light"
-    ) {
-    dark(true);
-}
-else if (
-    window.matchMedia && !window.matchMedia('(prefers-color-scheme: dark)').matches
-    && manualDarkMode != "dark"
-    ){
-    dark(false);
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
