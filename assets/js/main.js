@@ -16,10 +16,15 @@ function dark(enable){
 }
 
 if (
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && manualDarkMode != "light") {
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    && manualDarkMode != "light"
+    ) {
     dark(true);
 }
-else{
+else if (
+    window.matchMedia && !window.matchMedia('(prefers-color-scheme: dark)').matches
+    && manualDarkMode != "dark"
+    ){
     dark(false);
 }
 
