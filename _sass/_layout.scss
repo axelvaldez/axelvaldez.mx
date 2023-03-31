@@ -44,7 +44,7 @@ nav ul{
     margin: 0;
 
     @media (max-width: 600px){
-        justify-content: start;
+        justify-content: space-around;
         margin-left: -.5rem;
 
         &:first-child{

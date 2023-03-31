@@ -1,13 +1,13 @@
 .bbottom{
-    border-bottom: 1px solid var(--bg-muted);
+    border-bottom: 1px solid c("bg-muted");
 }
 
 .btop{
-    border-top: 1px solid var(--bg-muted);
+    border-top: 1px solid c("bg-muted");
 }
 
 .b{
-    border: 1px solid var(--bg-muted);
+    border: 1px solid c("bg-muted");
 }
 
 .b-2{
@@ -78,15 +78,15 @@ $sizes: (
 .tag{
     display: inline-block;
     padding: 0 .5rem;
-    background: var(--bg-muted);
-    color: var(--fg);
+    background: c("bg-muted");
+    color: c("fg");
     text-transform: uppercase;
     font-size: .8rem;
     border-radius: .25rem;
 }
 
 .muted{
-    color: var(--fg-muted);
+    color: c("fg-muted");
 }
 
 .size-1{
@@ -102,5 +102,71 @@ $sizes: (
 .mobile-hide{
     @media (max-width: 780px){
         display: none;
+    }
+}
+
+input.toggle-checkbox{
+    display: none;
+}
+input + .toggle-theme{
+    display: block;
+    background: var(--fg);
+    width: 2.5rem;
+    height: 1.5rem;
+    margin-left: auto;
+    border-radius: 30px;
+    position: relative;
+    
+    &::before{
+        content: "";
+        width: 1.1rem;
+        height: 1.1rem;
+        background: var(--bg);
+        position: absolute;
+        top: .2rem;
+        left: .2rem;
+        border-radius: 50%;
+        transition: .1s ease-in all;
+        z-index: 2;
+    }
+
+    &::after{
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--bg-muted);
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        z-index: 1;
+        background: url(/assets/img/icon-sun.png);
+        background-size: 45%;
+        background-position: .5rem center;
+        background-repeat: no-repeat;
+    }
+}
+
+input:checked + .toggle-theme{
+    &::before{
+        width: 1.2rem;
+        height: 1.2rem;
+        top: .15rem;
+        left: 1.15rem;
+    }
+    &::after{
+        content: "";
+        left: 0rem;
+        background: url(/assets/img/icon-moon.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.toggle-container{
+    @media (max-width: 600px){
+        position: absolute;
+        top: 4rem;
+        right: 2rem;
     }
 }
