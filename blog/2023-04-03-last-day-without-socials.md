@@ -18,4 +18,4 @@ Today is the last day of my 30 days without social media. These are some bullet 
 
 I don't think I'm going back to using Twitter. I don't miss being angry about the polarized opinions of people I don't even care about. The people I do care about, I already follow on Instagram.
 
-To be honest, I'm a little afraid of falling back into the addiction patterns and the emptiness from before. But also after thinking a lot about it, I don't think abandoning social media completely is even an option today. I think I need to keep the harmful dynamics of it in mind and find a balance. That's easier said than done, so I will keep tabs on it and reconsider in a couple of months.
+To be honest, I'm a little afraid of falling back into the addiction patterns and the emptiness from before. But also after thinking a lot about it, I don't think abandoning social media completely is even an option today. I need to keep the harmful dynamics of it in mind and find a balance. That's easier said than done, so I will keep tabs on it and reconsider in a couple of months.
