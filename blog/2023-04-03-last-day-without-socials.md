@@ -7,6 +7,8 @@ layout: layouts/post.njk
 
 Today is the last day of my 30 days without social media. These are some bullet points of my experience:
 
+<!-- more -->
+
 - The first two weeks were hell. I constantly reached for my phone and got frustrated. The fear of missing out (FOMO) was strong, but after two weeks, it was mostly gone.
 - I socialized a lot more in person: I went to the bar, invited friends over, and visited, too.
 - I got a feel for who is in my true immediate circle of people.
