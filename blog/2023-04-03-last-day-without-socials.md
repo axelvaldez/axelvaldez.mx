@@ -1,6 +1,6 @@
 ---
 title: Finishing my 30 days without social media
-date: 2023-03-29T08:00:58.697Z
+date: 2023-04-03T08:00:58.697Z
 permalink: blog/{{ title | slugify }}/index.html
 layout: layouts/post.njk
 ---
