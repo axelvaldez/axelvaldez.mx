@@ -16,6 +16,18 @@ html {
     }
     
 }
+
+.bg-bg{ background: var(--bg); }
+.bg-bg-muted{ background: var(--bg-muted); }
+.bg-fg{ background: var(--fg); }
+.bg-fg-muted{ background: var(--fg-muted); }
+.bg-acc{ background: var(--acc); }
+
+.text-bg{ color: var(--bg); }
+.text-bg-muted{ color: var(--bg-muted); }
+.text-fg{ color: var(--fg); }
+.text-fg-muted{ color: var(--fg-muted); }
+.text-acc{ color: var(--acc); }
     
     body {
         color: var(--fg);

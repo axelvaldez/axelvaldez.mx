@@ -26,8 +26,26 @@ Usage is fairly easy:
 
 The mockup automagically adds padding to your artwork, so there’s no need to worry about that. Just copy and paste as it is.
 
-### Download it
+<div class="p-2 my-2 bg-bg-muted rounded text-center">
+    <h3 class="mt-0">Download It</h3>
+    <p>This is a free resource and it will always be, but if you're able to, <strong>please consider buying me a coffee</strong>. You can do so by clicking the button at the bottom-left corner of this page.</p>
 
-<p class="text-center my-4"><a href="/assets/downloads/axelvaldez-sticker-mockup.psd.zip" class="btn text-center mx-auto">Download<br><small>Free Sticker PSD Mockup</small></a></p>
+<a href="/assets/downloads/axelvaldez-sticker-mockup.psd.zip" class="btn text-center mx-auto">Download<br><small>Free Sticker PSD Mockup</small></a>
 
-You can use it for whatever you want, no strings attached. If you like it, recommend it to your friends. For any comments, I’m [@axelvaldezmx](https://twitter.com/axelvaldezmx) on Twitter.
+</div>
+
+You can use it for whatever you want, no strings attached. If you like it, recommend it to your friends. For any comments, [here's a handy contact form](/contact/) :).
+</div>
+
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('axelvaldez', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#EA6959',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+
+
