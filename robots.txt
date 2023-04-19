@@ -1,0 +1,4 @@
+Sitemap: https://axelvaldz.mx/sitemap.xml
+
+User-agent: *
+Disallow:
