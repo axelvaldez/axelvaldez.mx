@@ -77,4 +77,11 @@ blockquote{
         bottom: -3.3rem;
         z-index: -1;
     }
+
+    .stream-card &{
+        &::before,&::after{
+            color: var(--bg);
+            z-index: 0;
+        }
+    }
 }
