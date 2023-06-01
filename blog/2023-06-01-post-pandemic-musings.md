@@ -11,6 +11,8 @@ It was far from good. It wreaked havoc on my mental health at first, but perhaps
 
 I miss being all day at home with my wife and my kids. Rationally I know it was difficult, especially with a three-year-old rightfully demanding attention, but I miss it anyway. Those times evoke feelings of intimacy, closeness, and profound love. Such immense love.
 
+<!-- more -->
+
 I also miss my Animal Crossing New Horizons gang. Three of my friends were already playing it a lot when I got it, and they warmly adopted me. We played together almost daily for about two or three months. We would set up a WhatsApp audio call and meet up on one of our islands, then talk for hours and hop to another of our digital properties. It was delightful and relaxing. Once again, much love.
 
 I missed my parents a lot, but when Anabel went to great lengths to bring them to me as a birthday surprise, it became one of my most cherished moments. Those tough times also brought us much closer.
