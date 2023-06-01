@@ -53,35 +53,39 @@ h3{
 }
 
 blockquote{
-    @extend .lead;
     font-style: italic;
     color: var(--fg-muted);
     position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--bg-muted);
 
-    &::before{
-        content: open-quote;
-        color: var(--bg-muted);
-        font-size: 5rem;
-        position: absolute;
-        left: -2rem;
-        top: -2.3rem;
-        z-index: -1;
-    }
+    // &::before{
+    //     content: open-quote;
+    //     color: var(--bg-muted);
+    //     font-size: 5rem;
+    //     position: absolute;
+    //     left: -2rem;
+    //     top: -2.3rem;
+    //     z-index: -1;
+    // }
 
-    &::after{
-        content: close-quote;
-        color: var(--bg-muted);
-        font-size: 5rem;
-        position: absolute;
-        right: -1rem;
-        bottom: -3.3rem;
-        z-index: -1;
-    }
+    // &::after{
+    //     content: close-quote;
+    //     color: var(--bg-muted);
+    //     font-size: 5rem;
+    //     position: absolute;
+    //     right: -1rem;
+    //     bottom: -3.3rem;
+    //     z-index: -1;
+    // }
 
     .stream-card &{
-        &::before,&::after{
-            color: var(--bg);
-            z-index: 0;
-        }
+        border-color: var(--bg);
+        // &::before,&::after{
+        //     color: var(--bg);
+        //     z-index: 0;
+        // }
     }
 }
