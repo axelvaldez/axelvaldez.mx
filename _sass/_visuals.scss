@@ -2,14 +2,14 @@ html {
     background: var(--bg);
 
     --bg: #fff;
-    --bg-muted: #efeade;
+    --bg-muted: rgba(238, 234, 222, 06);
     --fg: #373228;
     --fg-muted: rgba(50, 55, 40, .6);
     --acc: #EA6959;
 
     &.dark{
         --bg: #1b1321;
-        --bg-muted: rgba(111, 97, 122, .5);
+        --bg-muted: rgba(111, 97, 122, .25);
         --fg: #e7e4eb;
         --fg-muted: #bfa9d2;
         --acc: #EA6959;
