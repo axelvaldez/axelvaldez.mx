@@ -1,17 +1,17 @@
 html {
     background: var(--bg);
 
-    --bg: #fff;
-    --bg-muted: rgba(238, 234, 222, .6);
-    --fg: #373228;
-    --fg-muted: rgba(50, 55, 40, .6);
+    --bg: #FAFAF9;
+    --bg-muted: #EFECEB;
+    --fg: #301F1C;
+    --fg-muted: #6D5C5A;
     --acc: #EA6959;
 
     &.dark{
-        --bg: #1b1321;
-        --bg-muted: rgba(111, 97, 122, .25);
-        --fg: #e7e4eb;
-        --fg-muted: #bfa9d2;
+        --bg: #2F2637;
+        --bg-muted: #392E42;
+        --fg: #E1DCE5;
+        --fg-muted: #AEA5B6;
         --acc: #EA6959;
     }
     
