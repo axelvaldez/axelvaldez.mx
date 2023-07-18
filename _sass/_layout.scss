@@ -133,3 +133,18 @@ p{
 .text-center{
     text-align: center;
 }
+
+.webmention-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.webmention-img{
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.webmention-date{
+    margin-left: auto;
+}

@@ -22,6 +22,7 @@ html {
 .bg-fg{ background: var(--fg); }
 .bg-fg-muted{ background: var(--fg-muted); }
 .bg-acc{ background: var(--acc); }
+.bg-none { background: none !important; }
 
 .text-bg{ color: var(--bg); }
 .text-bg-muted{ color: var(--bg-muted); }
