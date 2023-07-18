@@ -387,10 +387,10 @@
                         <img class="u-photo webmention-img bg-acc" src="${replyObj.photo}" alt="${replyObj.name}">
                     </a>
                     <p class="reply__author reply__author p-author m-0">
-                        <a class="reply__bar u-url" href="${replyObj.url}">${replyObj.name}</a>
+                        <a class="reply__bar u-url" href="${replyObj.url}"><strong>${replyObj.name}</strong></a>
                     </p>
-                    <p class="reply__date m-0" href="">
-                        <a class="reply__bar u-url" href="${replyObj.url}">${formatDate(replyObj.date)}</a>
+                    <p class="reply__date m-0 ml-auto" href="">
+                        <a class="reply__bar u-url stealth" href="${replyObj.url}">${formatDate(replyObj.date)}</a>
                     </p>
                 </div>
                 <div class="comment__content e-entry ml-3">${replyObj.content}</div>
