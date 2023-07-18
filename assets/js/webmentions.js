@@ -393,7 +393,7 @@
                         <a class="reply__bar u-url stealth" href="${replyObj.url}">${formatDate(replyObj.date)}</a>
                     </p>
                 </div>
-                <div class="comment__content e-entry ml-3 mb-1">${replyObj.content}</div>
+                <div class="comment__content e-entry ml-3 mb-1 pb-1 bbottom stealth-links">${replyObj.content}</div>
             </div>
         </li>`;
     }
