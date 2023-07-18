@@ -393,7 +393,7 @@
                         <a class="reply__bar u-url stealth" href="${replyObj.url}">${formatDate(replyObj.date)}</a>
                     </p>
                 </div>
-                <div class="comment__content e-entry ml-3">${replyObj.content}</div>
+                <div class="comment__content e-entry ml-3 mb-1">${replyObj.content}</div>
             </div>
         </li>`;
     }
@@ -401,7 +401,7 @@
     // like, repost, link HTML template
     function likeRepostLinkTemplate(likeObj){
         return `<li class="content-webmentions__list-item h-entry">
-            <div class="reply h-card p-author webmention-container">
+            <div class="reply h-card p-author webmention-container mb-1">
                 <a class="reply__avatar u-author bg-none" href="${likeObj.authorUrl}" title="${likeObj.name}">
                     <img class="u-photo webmention-img bg-acc" src="${likeObj.photo}" alt="${likeObj.name}">
                 </a>
