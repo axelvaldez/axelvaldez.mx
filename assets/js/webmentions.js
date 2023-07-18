@@ -382,16 +382,18 @@
     function replyTemplate(replyObj){
         return `<li class="content-webmentions__list-item h-entry">
             <div class="comment">
-                <div class="comment__author reply p-author">
-                    <a class="reply__avatar u-author" href="${replyObj.authorUrl}" title="${replyObj.name}">
-                        <img class="u-photo" src="${replyObj.photo}" alt="${replyObj.name}">
+                <div class="comment__author reply p-author webmention-container">
+                    <a class="reply__avatar u-author bg-none" href="${replyObj.authorUrl}" title="${replyObj.name}">
+                        <img class="u-photo webmention-img bg-acc" src="${replyObj.photo}" alt="${replyObj.name}">
                     </a>
-                    <a class="reply__bar u-url" href="${replyObj.url}">
-                        <p class="reply__author reply__author p-author">${replyObj.name}</p>
-                        <p class="reply__date" href="">${formatDate(replyObj.date)}</p>
-                    </a>
+                    <p class="reply__author reply__author p-author m-0">
+                        <a class="reply__bar u-url" href="${replyObj.url}">${replyObj.name}</a>
+                    </p>
+                    <p class="reply__date m-0" href="">
+                        <a class="reply__bar u-url" href="${replyObj.url}">${formatDate(replyObj.date)}</a>
+                    </p>
                 </div>
-                <div class="comment__content e-entry">${replyObj.content}</div>
+                <div class="comment__content e-entry ml-3">${replyObj.content}</div>
             </div>
         </li>`;
     }
