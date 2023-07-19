@@ -117,9 +117,6 @@
         // render the number of webmentions to the page
         webmentionHTML += renderWebmentionTotal(data.links.length);
 
-        // render the form
-        renderForm();
-
         // if we have replies, build the replies HTML
         if(replies.length){
             renderReplies(replies);
@@ -134,6 +131,9 @@
         if(repostsLinks.length){
             renderRepostsLinks(repostsLinks);
         }
+
+        // render the form
+        renderForm();
 
         // close the webmention container
         webmentionHTML += `</div>`;
@@ -266,7 +266,7 @@
     // render the webmention submit form
     function renderForm(){
         // generate the form HTML
-        let formHTML = `<div class="content-webmentions__form">${formTemplate()}</div>`;
+        let formHTML = `<div class="content-webmentions__form mt-2">${formTemplate()}</div>`;
 
         // append the generated like HTML to the single set of HTML
         webmentionHTML += formHTML;
