@@ -74,10 +74,10 @@
 
     function parseWebmentions(data) {
         // if no mentions, hide the loader
-        if(data.links.length == 0){
-            document.querySelector('.content-webmentions__loader').classList.add('visually-hidden');
-            return;
-        }
+        // if(data.links.length == 0){
+        //     document.querySelector('.content-webmentions__loader').classList.add('visually-hidden');
+        //     return;
+        // }
 
         // sort the incoming data
         let links = data.links.sort(webmentionSort);
@@ -252,7 +252,7 @@
 
     // simple function to look a 1 vs many results
     function renderWebmentionTotal(total){
-        return `<h3 class="mt-0">${total + (total === 1 ? ' Webmention' : ' Webmentions')}</h3>`;
+        return `<h3 class="mt-0">Webmentions</h3>`;
     }
 
     // if we have a url instead of an author, construct the link

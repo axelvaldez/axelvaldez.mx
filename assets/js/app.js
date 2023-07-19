@@ -53,7 +53,7 @@
                     scriptLoader();
 
                     // show the loader while this is happening
-                    document.querySelector('.content-webmentions__loader').classList.remove('visually-hidden');
+                    // document.querySelector('.content-webmentions__loader').classList.remove('visually-hidden');
                 }
             });
         }
