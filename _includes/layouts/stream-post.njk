@@ -1,13 +1,13 @@
 {% include 'partials/header.njk' %}
 
-    <section>
+    <article class="h-entry">
         <div class="center-constrained">
             <div class="lead stream-card stream-card-single rounded p-2 pt-3">
-                {{ content | safe }}
-                <p class="muted small mb-0">{{ date  | readableDate }}</p>
+                <div class="e-content">{{ content | safe }}</div>
+                <p class="muted small mb-0"><time class="dt-published" datetime="{{ date }}">{{ date  | readableDate }}</time></p>
             </div>
         </div>
-    </section>
+    </article>
 
     <div class="center-constrained">
         <div class="content-webmentions mt-4 pt-4 btop"></div>
