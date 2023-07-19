@@ -186,4 +186,12 @@ html {
 
     .stealth-links a{
         color: var(--fg-muted);
-    }   
+    }
+
+    .hide{
+        opacity: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+    }
